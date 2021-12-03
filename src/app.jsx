@@ -1,10 +1,8 @@
 import './app.css';
-
+import Habit from './components/habit';
 function App() {
   return (
-    <h1>
-      hellow
-    </h1>
+    <Habit />
   );
 }
 
