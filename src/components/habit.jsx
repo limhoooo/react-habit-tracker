@@ -14,6 +14,7 @@ class Habit extends Component {
     render() {
         const { name, count } = this.props.habit;
         return (
+
             <li className="habit">
                 <span className="habit-name">{name}</span>
                 <span className="habit-count">{count}</span>
