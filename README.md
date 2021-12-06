@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# react
+특징 
+state 가 변경되면 컴포넌트트리 전체가 리 랜더링이 된다
+하지만 일반 DOM이 아닌 
+가상DOM 으로 인해 성능이 좋다
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###npm 
+라이브러리를 설치 관리 해주는 툴
+###npx
+라이브러리를 바로 실행할 수 있는 툴
+###yarn 
+npm이랑 같은 패키지 매니저 npm 보다 성능,보안이 좋음 
+npm 위에서 동작
 
-## Available Scripts
+###클래스 / 펑션
+상태가 리랜더링 되야하면 클래스
+정적 컴포넌트는 간단하게 펑션
+였는데
+16.8 부턴 펑션에서도 리액트 훅 으로 클래스랑 동일하게 동작하게끔 업데이트됨
+그리고 클래스 문법은 this나 바인딩 문제가 있어서 불편했다고함
+그래서 펑션이 유행하고 있다함
+큰 차이점은 리액트훅
 
-In the project directory, you can run:
+###<React.Fragment>
+의미없는 엘리먼트 즉 엘리먼트끼리 묶기만을 위함
+html 노드 묶을때 사용
+vue 에서 template 로 묶어줄때 썻던것과 동일
+<> 로도 사용가능
 
-### `yarn start`
+###state 수정
+state 를 수정할땐 setState를 사용해서 값을 변경 해야
+리랜더링이 된다. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###PureComponent
+리랜더링 사용안함
+해당컴포넌트와 상관없는 다른곳에서 state 나 data 변경시 
+랜더링되는것을 막아줌
+본인 컴포넌트 state data 만 비교해서 랜더링 할지말지 결정함
+성능이슈 
