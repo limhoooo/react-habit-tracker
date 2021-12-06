@@ -4,6 +4,14 @@ import HabitAppForm from './habitAppForm';
 
 class Habits extends Component {
 
+    componentDidMount() {
+
+    }
+
+    componentWillUnmount() {
+
+    }
+
     handleIncrement = habit => {
         this.props.onIncrement(habit);
     }
