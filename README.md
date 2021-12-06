@@ -1,4 +1,4 @@
-# react
+# React
 특징 <br>
 state 가 변경되면 컴포넌트트리 전체가 리 랜더링이 된다<br>
 하지만 일반 DOM이 아닌 <br>
